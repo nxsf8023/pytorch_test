@@ -5,6 +5,7 @@
 """线性回归"""
 
 import torch
+import torch.nn as nn
 from torch.nn import Linear, Module, MSELoss
 from torch.optim import SGD
 import numpy as np
@@ -54,4 +55,10 @@ plt.legend()
 plt.show()
 
 """损失函数"""
-a = 1
+nn.L1Loss  # 输入x和目标y之间差的绝对值
+nn.NLLLoss  # 用于多分类的负对数似然损失函数
+nn.MSELoss  # 均方损失函数 ，输入x和目标y之间均方差
+nn.CrossEntropyLoss  # 多分类用的交叉熵损失函数
+nn.BCELoss  # 计算 x 与 y 之间的二进制交叉熵
+
+"""梯度下降"""
