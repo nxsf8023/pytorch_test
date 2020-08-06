@@ -62,3 +62,12 @@ nn.CrossEntropyLoss  # 多分类用的交叉熵损失函数
 nn.BCELoss  # 计算 x 与 y 之间的二进制交叉熵
 
 """梯度下降"""
+optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)  # 随机梯度下降算法
+optimizer = torch.optim.RMSprop()  # 可以减小某些维度梯度更新波动较大的情况
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01, betas=(0.9, 0.999), eps=1e-08)
+
+"""方差/偏差
+偏差度量了学习算法的期望预测与真实结果的偏离程序，即刻画了学习算法本身的拟合能力
+方差度量了同样大小的训练集的变动所导致的学习性能的变化，即模型的泛化能力
+"""
+print(5-w.data.item(), 7-b.data.item())
