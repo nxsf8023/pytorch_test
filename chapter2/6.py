@@ -34,10 +34,22 @@ class LeNet5(nn.Module):
 
 
 letnet5 = LeNet5()
-print(letnet5)
+# print(letnet5)
 
 
 import torchvision
 """AlexNet"""
-model = torchvision.models.alexnet(pretrained=False)
-print(model)
+model_alexnet = torchvision.models.alexnet(pretrained=False)
+# print(model_alexnet)
+
+"""vgg16"""
+model_vgg16 = torchvision.models.vgg16(pretrained=False)
+# print(model_vgg16)
+
+"""GoogLeNet"""
+model_googlenet = torchvision.models.inception_v3(pretrained=False)
+# print(model_googlenet)
+
+"""resNet"""
+model_resnet = torchvision.models.resnet50(pretrained=False)
+print(model_resnet)
