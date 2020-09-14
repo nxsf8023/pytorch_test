@@ -8,7 +8,7 @@ class Net(nn.Module):
 
     def __init__(self):
         super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(1, 6, 5)
+        self.conv1 = nn.Conv2d(3, 6, 5)
         self.conv2 = nn.Conv2d(6, 16, 5)
 
         self.fc1 = nn.Linear(16 * 5 * 5, 120)
@@ -38,7 +38,7 @@ def main():
     params = list(net.parameters())
     print(len(params))
     print(params[0].size())
-    input = torch.randn(1, 1, 32, 32)
+    input = torch.randn(1, 3, 32, 32)
     out = net(input)
     target = torch.randn(10)
     target = target.view(1, -1)
