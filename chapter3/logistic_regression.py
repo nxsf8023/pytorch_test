@@ -43,7 +43,7 @@ def test(pred, lab):
 
 
 net = LR()
-criterion = nn.CrossEntropyLoss()
+criterion = nn.CrossEntropyLoss()  # 使用CrossEntropyLoss损失
 optm = torch.optim.Adam(net.parameters())
 epochs = 1000
 
